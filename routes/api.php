@@ -14,8 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
-Route::post('test', 'aiCarRecord\record@test');
+Route::match(['GET', 'POST'], 'test', 'aiCarRecord\record@test');
+Route::match(['GET', 'POST'], 'testSql', 'aiCarRecord\record@testSql');
+Route::post('testUpdata', 'aiCarRecord\record@testUpdata');

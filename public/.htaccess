@@ -4,7 +4,7 @@
     </IfModule>
 
     RewriteEngine On
-    RewriteBase /road_lifecycle_research_sv
+    RewriteBase /newLaravel10_be
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
